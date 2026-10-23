@@ -1,0 +1,291 @@
+/* Variables */
+
+:root {
+  --primary: #1e3a5f;
+  --secondary: #3478f6;
+  --background: #f5f7fa;
+  --white: #ffffff;
+  --border: #d9d9d9;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  min-height: 100vh;
+}
+
+/* Header */
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Usuario */
+
+.auth-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#userInfo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Botones superiores */
+
+.view-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Filtros */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.filters input {
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Botones */
+
+button {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  background: var(--secondary);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Resultados */
+
+.results-info {
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Leyenda */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff0000;
+}
+
+.orange {
+  background: #ff6600;
+}
+
+.yellow {
+  background: #f7c600;
+}
+
+.green {
+  background: #2bbf2b;
+}
+
+.blue {
+  background: #1d7cf2;
+}
+
+.gray {
+  background: #555;
+}
+
+/* Estadísticas */
+
+.stats {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.stat-card strong {
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+/* Favoritos vacíos */
+
+.favorites-message {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Loader */
+
+.loader {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+/* Mapas */
+
+.maps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+article h2 {
+  margin-bottom: 1rem;
+}
+
+#map,
+#map2 {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Top terremotos */
+
+.top-earthquakes {
+  padding: 1rem;
+}
+
+.top-earthquakes h2 {
+  margin-bottom: 1rem;
+}
+
+.top-earthquakes table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.top-earthquakes th {
+  background: var(--primary);
+  color: white;
+}
+
+.top-earthquakes th,
+.top-earthquakes td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.top-earthquakes tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.top-earthquakes tr:hover {
+  background: #e9f0ff;
+}
+
+/* Popup Leaflet */
+
+.leaflet-popup-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.leaflet-popup-content p {
+  margin-bottom: 0.3rem;
+}
+
+/* Responsive */
+
+@media (min-width: 900px) {
+
+  .maps {
+    flex-direction: row;
+  }
+
+  article {
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .view-buttons,
+  .filters {
+    flex-direction: column;
+  }
+
+  button,
+  input {
+    width: 100%;
+  }
+
+}
